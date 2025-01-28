@@ -1,10 +1,11 @@
 ---
 title: Apple devices - iOS/Safari
-description: Apple doesn't support the Push API standard and still uses his own closed and proprietary Push service 
+description: Apple supports the Push API under certain circumstances
 ---
 
-## Apple doesn't support the standard Push API
+To get the Push Notifications working on iOS or iPadOS, whe following requirements must be met:
+- Minimum version 16.4 of the OS
+- The page must have a valid [manifest.json](https://web.dev/articles/add-manifest) in which the property "display" must be set to "standalon" or "fullscreen"
+- The page must be saved to the homescreen
 
-At this moment, Apple hasn't added support for the Push API standard yet. It means
-our plugin doesn't support iOS (iPhone/iPad) devices and Safari. When Apple adds support to the 
-Push API standard, then we should be able to also send Push Notifications to those devices. 
+If the requirements are met, the user has to open the website via the app icon on their homescreen and the notification dialogue will appear.
